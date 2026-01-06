@@ -20,6 +20,55 @@ const { title, description = "Professional Freelancer & Developer" } = Astro.pro
 		<title>{title}</title>
 	</head>
 	<body class="bg-gray-50 dark:bg-gray-900 text-gray-900 dark:text-gray-100">
-		<slot />
+		<!-- Navigation -->
+		<nav class="fixed top-0 w-full bg-white/80 dark:bg-gray-900/80 backdrop-blur-sm z-50 border-b border-gray-200 dark:border-gray-800">
+			<div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+				<div class="flex justify-between items-center h-16">
+					<a href="/" class="text-xl font-bold text-blue-600 dark:text-blue-400">
+						CS
+					</a>
+					<div class="hidden md:flex space-x-8">
+						<a href="/#about" class="hover:text-blue-600 dark:hover:text-blue-400 transition">Sobre Mí</a>
+						<a href="/#skills" class="hover:text-blue-600 dark:hover:text-blue-400 transition">Habilidades</a>
+						<a href="/#experience" class="hover:text-blue-600 dark:hover:text-blue-400 transition">Experiencia</a>
+						<a href="/#projects" class="hover:text-blue-600 dark:hover:text-blue-400 transition">Proyectos</a>
+						<a href="/blog" class="hover:text-blue-600 dark:hover:text-blue-400 transition">Blog</a>
+						<a href="/#contact" class="hover:text-blue-600 dark:hover:text-blue-400 transition">Contacto</a>
+					</div>
+					<button id="theme-toggle" class="p-2 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800">
+						<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+							<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"></path>
+						</svg>
+					</button>
+				</div>
+			</div>
+		</nav>
+
+		<main class="min-h-screen">
+			<slot />
+		</main>
+
+		<!-- Footer -->
+		<footer class="py-8 px-4 sm:px-6 lg:px-8 border-t border-gray-200 dark:border-gray-800 bg-white dark:bg-gray-900">
+			<div class="max-w-6xl mx-auto text-center text-gray-600 dark:text-gray-400">
+				<p>&copy; 2026 Camilo Salazar Ocampo. All rights reserved.</p>
+			</div>
+		</footer>
 	</body>
 </html>
+
+<script>
+	// Theme toggle
+	const themeToggle = document.getElementById('theme-toggle');
+	const html = document.documentElement;
+
+	themeToggle?.addEventListener('click', () => {
+		html.classList.toggle('dark');
+		localStorage.setItem('theme', html.classList.contains('dark') ? 'dark' : 'light');
+	});
+
+	// Load saved theme
+	if (localStorage.getItem('theme') === 'dark' || (!localStorage.getItem('theme') && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+		html.classList.add('dark');
+	}
+</script>

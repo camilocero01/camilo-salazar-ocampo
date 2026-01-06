@@ -15,7 +15,8 @@ import Layout from '../layouts/Layout.astro';
 						<a href="#about" class="hover:text-blue-600 dark:hover:text-blue-400 transition">Sobre Mí</a>
 						<a href="#skills" class="hover:text-blue-600 dark:hover:text-blue-400 transition">Habilidades</a>
 						<a href="#experience" class="hover:text-blue-600 dark:hover:text-blue-400 transition">Experiencia</a>
-						<a href="#projects" class="hover:text-blue-600 dark:hover:text-blue-400 transition">Proyectos</a>					<a href="#blog" class="hover:text-blue-600 dark:hover:text-blue-400 transition">Blog</a>						<a href="#contact" class="hover:text-blue-600 dark:hover:text-blue-400 transition">Contacto</a>
+						<a href="#projects" class="hover:text-blue-600 dark:hover:text-blue-400 transition">Proyectos</a>					
+						<a href="/blog" class="hover:text-blue-600 dark:hover:text-blue-400 transition">Blog</a>						<a href="#contact" class="hover:text-blue-600 dark:hover:text-blue-400 transition">Contacto</a>
 					</div>
 					<button id="theme-toggle" class="p-2 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800">
 						<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -110,12 +111,11 @@ import Layout from '../layouts/Layout.astro';
 										)}
 										<span class="text-sm font-semibold flex-1">{skill.name}</span>
 									</div>
-									<div class="flex gap-1 justify-end">
-										{[1, 2, 3, 4, 5].map(star => (
-											<svg class={`w-4 h-4 ${star <= skill.level ? 'text-yellow-400' : 'text-gray-300 dark:text-gray-600'}`} fill="currentColor" viewBox="0 0 20 20">
-												<path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
-											</svg>
-										))}
+									<div class="w-full">
+										<div class="text-xs text-gray-500 dark:text-gray-400 mb-1">{skill.level}/5</div>
+										<div class="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-2">
+											<div class="bg-gradient-to-r from-blue-500 to-purple-500 h-2 rounded-full transition-all" style={`width: ${(skill.level / 5) * 100}%`}></div>
+										</div>
 									</div>
 								</div>
 							))}
@@ -143,12 +143,11 @@ import Layout from '../layouts/Layout.astro';
 										)}
 										<span class="text-sm font-semibold flex-1">{skill.name}</span>
 									</div>
-									<div class="flex gap-1 justify-end">
-										{[1, 2, 3, 4, 5].map(star => (
-											<svg class={`w-4 h-4 ${star <= skill.level ? 'text-yellow-400' : 'text-gray-300 dark:text-gray-600'}`} fill="currentColor" viewBox="0 0 20 20">
-												<path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
-											</svg>
-										))}
+									<div class="w-full">
+										<div class="text-xs text-gray-500 dark:text-gray-400 mb-1">{skill.level}/5</div>
+										<div class="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-2">
+											<div class="bg-gradient-to-r from-purple-500 to-pink-500 h-2 rounded-full transition-all" style={`width: ${(skill.level / 5) * 100}%`}></div>
+										</div>
 									</div>
 								</div>
 							))}
@@ -169,12 +168,11 @@ import Layout from '../layouts/Layout.astro';
 										<img src={skill.logo} alt={skill.name} class="w-8 h-8" />
 										<span class="text-sm font-semibold flex-1">{skill.name}</span>
 									</div>
-									<div class="flex gap-1 justify-end">
-										{[1, 2, 3, 4, 5].map(star => (
-											<svg class={`w-4 h-4 ${star <= skill.level ? 'text-yellow-400' : 'text-gray-300 dark:text-gray-600'}`} fill="currentColor" viewBox="0 0 20 20">
-												<path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
-											</svg>
-										))}
+									<div class="w-full">
+										<div class="text-xs text-gray-500 dark:text-gray-400 mb-1">{skill.level}/5</div>
+										<div class="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-2">
+											<div class="bg-gradient-to-r from-green-500 to-emerald-500 h-2 rounded-full transition-all" style={`width: ${(skill.level / 5) * 100}%`}></div>
+										</div>
 									</div>
 								</div>
 							))}
@@ -201,12 +199,11 @@ import Layout from '../layouts/Layout.astro';
 										)}
 										<span class="text-sm font-semibold flex-1">{skill.name}</span>
 									</div>
-									<div class="flex gap-1 justify-end">
-										{[1, 2, 3, 4, 5].map(star => (
-											<svg class={`w-4 h-4 ${star <= skill.level ? 'text-yellow-400' : 'text-gray-300 dark:text-gray-600'}`} fill="currentColor" viewBox="0 0 20 20">
-												<path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
-											</svg>
-										))}
+									<div class="w-full">
+										<div class="text-xs text-gray-500 dark:text-gray-400 mb-1">{skill.level}/5</div>
+										<div class="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-2">
+											<div class="bg-gradient-to-r from-orange-500 to-red-500 h-2 rounded-full transition-all" style={`width: ${(skill.level / 5) * 100}%`}></div>
+										</div>
 									</div>
 								</div>
 							))}
@@ -235,12 +232,11 @@ import Layout from '../layouts/Layout.astro';
 										)}
 										<span class="text-sm font-semibold flex-1">{skill.name}</span>
 									</div>
-									<div class="flex gap-1 justify-end">
-										{[1, 2, 3, 4, 5].map(star => (
-											<svg class={`w-4 h-4 ${star <= skill.level ? 'text-yellow-400' : 'text-gray-300 dark:text-gray-600'}`} fill="currentColor" viewBox="0 0 20 20">
-												<path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
-											</svg>
-										))}
+									<div class="w-full">
+										<div class="text-xs text-gray-500 dark:text-gray-400 mb-1">{skill.level}/5</div>
+										<div class="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-2">
+											<div class="bg-gradient-to-r from-pink-500 to-rose-500 h-2 rounded-full transition-all" style={`width: ${(skill.level / 5) * 100}%`}></div>
+										</div>
 									</div>
 								</div>
 							))}
@@ -372,101 +368,6 @@ import Layout from '../layouts/Layout.astro';
 							</div>
 						</div>
 					))}
-				</div>
-			</div>
-		</section>
-
-		<!-- Blog Section -->
-		<section id="blog" class="py-20 px-4 sm:px-6 lg:px-8">
-			<div class="max-w-6xl mx-auto">
-				<h2 class="text-4xl font-bold mb-12 text-center">Blog: Data Engineering & Web Development</h2>
-				<div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-					{[
-						{
-							title: 'Medallion Architecture: Estructura de Capas para Data Warehouses Modernos',
-							excerpt: 'Implementación práctica de la arquitectura medallion (Bronze/Silver/Gold) en Azure Databricks y GCP. Patrones de diseño, mejores prácticas y casos de uso reales.',
-							category: 'Data Architecture',
-							date: '2025-01-15',
-							readTime: '8 min',
-							slug: 'medallion-architecture-data-warehouse',
-							keywords: ['medallion architecture', 'data warehouse', 'ETL', 'Azure Databricks', 'GCP']
-						},
-						{
-							title: 'SEO y Performance Web: Cómo Lograr 95+ en PageSpeed Insights',
-							excerpt: 'Estrategias de optimización web con Astro y Vercel. Core Web Vitals, lazy loading, optimización de imágenes y técnicas avanzadas de SEO técnico.',
-							category: 'Web Development',
-							date: '2025-01-10',
-							readTime: '10 min',
-							slug: 'seo-performance-astro-vercel',
-							keywords: ['SEO', 'Core Web Vitals', 'Astro', 'Vercel', 'PageSpeed']
-						},
-						{
-							title: 'Gobernanza de Datos: Framework Práctico para Empresas',
-							excerpt: 'Implementación de framework de data governance en organizaciones complejas. Roles, responsabilidades, políticas de calidad y seguridad de datos.',
-							category: 'Data Governance',
-							date: '2025-01-05',
-							readTime: '12 min',
-							slug: 'data-governance-framework-empresas',
-							keywords: ['data governance', 'data quality', 'data security', 'compliance']
-						},
-						{
-							title: 'BigQuery vs Snowflake vs Databricks: Comparativa 2025',
-							excerpt: 'Análisis detallado de las tres principales plataformas de cloud data warehouse. Rendimiento, costos, características y cuándo elegir cada una.',
-							category: 'Cloud Data Platforms',
-							date: '2024-12-28',
-							readTime: '15 min',
-							slug: 'bigquery-snowflake-databricks-comparativa',
-							keywords: ['BigQuery', 'Snowflake', 'Databricks', 'data warehouse', 'cloud']
-						},
-						{
-							title: 'Migrando de WordPress a Astro: Evolución Técnica en 2025',
-							excerpt: 'Guía completa para migrar sitios web desde WordPress a Astro. Performance, mantenibilidad, costos y mejoras en SEO después de la migración.',
-							category: 'Web Development',
-							date: '2024-12-20',
-							readTime: '11 min',
-							slug: 'migracion-wordpress-astro-2025',
-							keywords: ['WordPress', 'Astro', 'JAMstack', 'migración web', 'SSG']
-						},
-						{
-							title: 'Pipelines de Datos: De ELT a Real-Time Stream Processing',
-							excerpt: 'Evolución de arquitecturas ETL hacia soluciones de stream processing. Apache Kafka, Spark Streaming y Azure Event Hubs en producción.',
-							category: 'Data Engineering',
-							date: '2024-12-15',
-							readTime: '13 min',
-							slug: 'pipelines-elt-stream-processing',
-							keywords: ['ETL', 'ELT', 'stream processing', 'Kafka', 'Spark', 'real-time']
-						}
-					].map(article => (
-						<article class="bg-white dark:bg-gray-800 rounded-lg shadow-md hover:shadow-lg transition overflow-hidden">
-							<div class="p-6">
-								<div class="flex items-center gap-2 mb-3">
-									<span class="text-xs font-bold text-blue-600 dark:text-blue-400 bg-blue-100 dark:bg-blue-900 px-3 py-1 rounded-full">
-										{article.category}
-									</span>
-									<span class="text-xs text-gray-500 dark:text-gray-400">{article.readTime}</span>
-								</div>
-								<h3 class="text-lg font-bold mb-3 hover:text-blue-600 dark:hover:text-blue-400 transition line-clamp-2">
-									<a href={`/blog/${article.slug}`}>{article.title}</a>
-								</h3>
-								<p class="text-sm text-gray-600 dark:text-gray-400 mb-4 line-clamp-3">
-									{article.excerpt}
-								</p>
-								<div class="flex items-center justify-between">
-									<time class="text-xs text-gray-500 dark:text-gray-400" dateTime={article.date}>
-										{new Date(article.date).toLocaleDateString('es-CO', { year: 'numeric', month: 'long', day: 'numeric' })}
-									</time>
-									<a href={`/blog/${article.slug}`} class="text-xs font-semibold text-blue-600 dark:text-blue-400 hover:text-blue-700 dark:hover:text-blue-300 transition">
-										Leer más →
-									</a>
-								</div>
-							</div>
-						</article>
-					))}
-				</div>
-				<div class="text-center mt-12">
-					<a href="/blog" class="inline-block px-8 py-3 bg-blue-600 hover:bg-blue-700 text-white rounded-lg font-semibold transition">
-						Ver Todos los Artículos
-					</a>
 				</div>
 			</div>
 		</section>
