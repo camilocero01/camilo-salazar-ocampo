@@ -1,0 +1,156 @@
+---
+import Layout from '../layouts/Layout.astro';
+const title = 'Web Express para Médicos';
+const description = 'Sitios web profesionales, rápidos y sin complicaciones para médicos especialistas.';
+---
+
+<Layout title={title} description={description}>
+  <main class="bg-white text-gray-900">
+    <!-- Hero -->
+    <section class="pt-24 pb-16 px-4 sm:px-8 lg:px-16 bg-gradient-to-r from-blue-100 to-purple-100">
+      <div class="max-w-3xl mx-auto text-center">
+        <h1 class="text-5xl font-bold mb-6 bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">Web Express para Médicos</h1>
+        <p class="text-xl mb-4">Tu sitio web profesional listo en minutos. Sin reuniones, sin complicaciones.</p>
+        <p class="text-lg text-blue-700 font-semibold mb-8">Vende confianza y prestigio, no solo código.</p>
+        <a href="#contacto" class="inline-block px-8 py-4 bg-blue-600 text-white rounded-lg font-bold shadow hover:bg-blue-700 transition">Solicita tu demo</a>
+      </div>
+    </section>
+
+    <!-- Beneficios -->
+    <section class="py-16 px-4 sm:px-8 lg:px-16">
+      <div class="max-w-4xl mx-auto grid md:grid-cols-2 gap-12">
+        <div>
+          <h2 class="text-2xl font-bold mb-4">¿Por qué Web Express?</h2>
+          <ul class="space-y-4 text-lg">
+            <li>✔️ <b>Prestigio profesional:</b> Tu imagen y consultorio en una URL real, lista para compartir.</li>
+            <li>✔️ <b>Sin reuniones:</b> Solo aprueba el demo, nosotros nos encargamos del resto.</li>
+            <li>✔️ <b>Rápido y seguro:</b> Sitio listo en minutos, con hosting y dominio propio.</li>
+            <li>✔️ <b>Actualizaciones fáciles:</b> Cambia horarios, teléfono o fotos cuando lo necesites.</li>
+          </ul>
+        </div>
+        <div>
+          <h2 class="text-2xl font-bold mb-4">¿Cómo funciona?</h2>
+          <ol class="list-decimal ml-6 space-y-3 text-lg">
+            <li>Recibes un demo privado con tu información real.</li>
+            <li>Si te gusta, activamos el sitio con tu dominio.</li>
+            <li>Pagas solo cuando apruebas el resultado.</li>
+            <li>Incluye soporte, hosting y cambios menores.</li>
+          </ol>
+        </div>
+      </div>
+    </section>
+
+    <!-- Ejemplo Demo -->
+    <section class="py-16 px-4 sm:px-8 lg:px-16 bg-gray-50">
+      <div class="max-w-3xl mx-auto text-center">
+        <h2 class="text-2xl font-bold mb-6">Ejemplo de Demo</h2>
+        <img src="https://placehold.co/900x400?text=Demo+Web+Express" alt="Demo Web Express" class="rounded-xl shadow mx-auto mb-6" />
+        <p class="text-lg">Visualiza tu sitio antes de comprar. Personalizado con tu nombre, especialidad y fotos.</p>
+      </div>
+    </section>
+
+    <!-- Precios -->
+    <section class="py-16 px-4 sm:px-8 lg:px-16">
+      <div class="max-w-4xl mx-auto text-center">
+        <h2 class="text-2xl font-bold mb-6">Planes y Precios</h2>
+        <div class="grid md:grid-cols-2 gap-8">
+          <div class="bg-white border border-gray-200 rounded-lg p-8 shadow">
+            <h3 class="text-xl font-bold mb-2">Pago Único</h3>
+            <p class="mb-4">Sitio web + dominio por un solo pago.</p>
+            <div class="text-3xl font-bold text-blue-600 mb-2">$250 USD</div>
+            <ul class="text-left mb-4 space-y-2">
+              <li>✔️ Sitio personalizado</li>
+              <li>✔️ Dominio propio</li>
+              <li>✔️ Certificado SSL</li>
+              <li>✔️ 1 mes de soporte</li>
+            </ul>
+          </div>
+          <div class="bg-white border border-gray-200 rounded-lg p-8 shadow">
+            <h3 class="text-xl font-bold mb-2">Website as a Service (WaaS)</h3>
+            <p class="mb-4">Setup bajo + mensualidad con todo incluido.</p>
+            <div class="text-3xl font-bold text-purple-600 mb-2">$50 USD setup + $20 USD/mes</div>
+            <ul class="text-left mb-4 space-y-2">
+              <li>✔️ Hosting y dominio</li>
+              <li>✔️ Cambios menores ilimitados</li>
+              <li>✔️ Soporte y renovaciones</li>
+              <li>✔️ Certificado SSL</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA y Contacto -->
+    <section id="contacto" class="py-16 px-4 sm:px-8 lg:px-16 bg-gradient-to-r from-blue-50 to-purple-50">
+      <div class="max-w-2xl mx-auto text-center">
+        <h2 class="text-2xl font-bold mb-4">Solicita tu demo sin compromiso</h2>
+        <p class="mb-6 text-lg">Envíame tu nombre y especialidad, y te envío el demo privado en 24 horas.</p>
+        <a href="https://wa.me/573001234567" target="_blank" class="inline-block px-6 py-3 bg-green-500 text-white font-bold rounded-lg shadow hover:bg-green-600 transition mb-4">Contactar por WhatsApp</a>
+        <br />
+        <a href="mailto:contacto@tusitioweb.com" class="text-blue-700 underline">contacto@tusitioweb.com</a>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="py-16 px-4 sm:px-8 lg:px-16">
+      <div class="max-w-3xl mx-auto">
+        <h2 class="text-2xl font-bold mb-6 text-center">Preguntas Frecuentes</h2>
+        <div class="space-y-4">
+          <div class="border rounded-lg overflow-hidden">
+            <button type="button" class="w-full text-left px-6 py-4 bg-gray-100 font-bold focus:outline-none flex justify-between items-center faq-toggle">
+              <span>¿Cuánto tarda el demo?</span>
+              <svg class="w-5 h-5 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg>
+            </button>
+            <div class="px-6 py-4 bg-white faq-content hidden">
+              En menos de 24 horas recibes tu demo privado.
+            </div>
+          </div>
+          <div class="border rounded-lg overflow-hidden">
+            <button type="button" class="w-full text-left px-6 py-4 bg-gray-100 font-bold focus:outline-none flex justify-between items-center faq-toggle">
+              <span>¿Qué pasa si no me gusta?</span>
+              <svg class="w-5 h-5 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg>
+            </button>
+            <div class="px-6 py-4 bg-white faq-content hidden">
+              No hay compromiso. Si no te convence, el demo se elimina sin costo.
+            </div>
+          </div>
+          <div class="border rounded-lg overflow-hidden">
+            <button type="button" class="w-full text-left px-6 py-4 bg-gray-100 font-bold focus:outline-none flex justify-between items-center faq-toggle">
+              <span>¿Puedo pedir cambios?</span>
+              <svg class="w-5 h-5 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg>
+            </button>
+            <div class="px-6 py-4 bg-white faq-content hidden">
+              Sí, puedes solicitar cambios menores en cualquier momento si eliges el plan WaaS.
+            </div>
+          </div>
+          <div class="border rounded-lg overflow-hidden">
+            <button type="button" class="w-full text-left px-6 py-4 bg-gray-100 font-bold focus:outline-none flex justify-between items-center faq-toggle">
+              <span>¿El sitio es seguro?</span>
+              <svg class="w-5 h-5 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg>
+            </button>
+            <div class="px-6 py-4 bg-white faq-content hidden">
+              Todos los sitios incluyen certificado SSL y hosting seguro.
+            </div>
+          </div>
+        </div>
+      </div>
+      <script>
+        document.addEventListener('DOMContentLoaded', function() {
+          const toggles = document.querySelectorAll('.faq-toggle');
+          toggles.forEach(btn => {
+            btn.addEventListener('click', function() {
+              const content = btn.nextElementSibling;
+              const icon = btn.querySelector('svg');
+              const isOpen = !content.classList.contains('hidden');
+              document.querySelectorAll('.faq-content').forEach(c => c.classList.add('hidden'));
+              document.querySelectorAll('.faq-toggle svg').forEach(i => i.classList.remove('rotate-180'));
+              if (!isOpen) {
+                content.classList.remove('hidden');
+                icon.classList.add('rotate-180');
+              }
+            });
+          });
+        });
+      </script>
+  </main>
+</Layout>
